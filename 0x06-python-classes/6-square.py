@@ -1,16 +1,49 @@
 #!/usr/bin/python3
+"""Square Class.
+
+This module contains a class that defines a square.
+
+Usage Example:
+
+    Square = __import__('6-square').Square
+
+    my_square = Square(3)
+    print(type(my_square))
+    print(my_square.__dict__)
+"""
+
+
 class Square:
-     def __init__(self, size=0, position=(0, 0)):
+    """Defines the blueprint of a square.
+
+    Attribute:
+        size (int): An integer representing the object size.
+        position (int, int): The position of the new square.
+    """
+
+    def __init__(self, size=0, position=(0, 0)):
         """An object constructor method."""
         self.__size = size
         self.__position = position
 
     @property
     def size(self):
+        """Gets the size private attribute value.
+
+        Returns:
+            The size private attribute
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Sets the size private attribute value.
+
+        Validates the assignment of the size private attribute.
+
+        Arg:
+            value: the value to be set
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -28,6 +61,13 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """Sets the position private attribute value.
+
+        Validates the assignment of the position private attribute.
+
+        Arg:
+            value: the value to be set
+        """
         if (
             not isinstance(value, tuple)
             or len(value) != 2

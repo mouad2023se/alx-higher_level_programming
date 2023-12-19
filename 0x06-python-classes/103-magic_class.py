@@ -1,4 +1,15 @@
 #!/usr/bin/python3
+"""MagicClass.
+
+This module contains code representing a circle.
+
+Usage Example:
+
+    MagicClass = __import__('103-magic_class').MagicClass
+
+    a_circle = MagicClass(5)
+    print(a_circle.area())
+"""
 import math
 
 
@@ -22,4 +33,4 @@ class MagicClass:
 
     def circumference(self):
         """Return The circumference of the MagicClass."""
-        return 2 * math.pi * self.__radius
+        return 2 * math.pi * self.__radiu

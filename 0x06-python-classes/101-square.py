@@ -1,5 +1,27 @@
 #!/usr/bin/python3
+"""Square Class.
+
+This module contains a class that defines a square.
+
+Usage Example:
+
+    Square = __import__('101-square').Square
+
+    my_square = Square(5, (0, 0))
+    print(my_square)
+    print("--")
+    my_square = Square(5, (4, 1))
+    print(my_square)
+"""
+
+
 class Square:
+    """Defines the blueprint of a square.
+
+    Attribute:
+        size (int): An integer representing the object size.
+        position (int, int): The position of the new square.
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """An object constructor method."""

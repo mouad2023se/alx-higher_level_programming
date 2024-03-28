@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""A script that:
-- takes in a URL,
-- sends a request to the URL and displays the value
-- of the X-Request-Id variable found in the header ofthe response.
+"""
+Use requests package to make a post request sending email param
+and display body of response.
 """
 import sys
-import urllib.request
+import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
-
-    request = urllib.request.Request(url)
-    with urllib.request.urlopen(request) as response:
-        print(dict(response.headers).get("X-Request-Id"))
+    payload = {'email': sys.argv[2]}
+    r = requests.post(url, data=payload)
+    print(r.text)
